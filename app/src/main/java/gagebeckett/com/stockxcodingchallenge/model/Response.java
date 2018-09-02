@@ -1,5 +1,6 @@
 package gagebeckett.com.stockxcodingchallenge.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Response {
@@ -81,12 +82,12 @@ public class Response {
         private boolean is_video;
         private boolean enabled;
 
-        private List<String> link_flair_richtext;
-        private List<String> user_reports;
-        private List<String> author_flair_richtext;
-        private List<Object> images;
-        private List<Object> resolutions;
-        private List<String> mod_reports;
+        private ArrayList link_flair_richtext;
+        private ArrayList user_reports;
+        private ArrayList author_flair_richtext;
+        private ArrayList images;
+        private ArrayList resolutions;
+        private ArrayList mod_reports;
 
         private Object media_embed;
         private Object secure_media_embed;
