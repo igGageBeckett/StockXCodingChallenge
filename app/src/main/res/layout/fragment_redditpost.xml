@@ -10,15 +10,50 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/RedditPost_TextView"
+            android:id="@+id/upVoteCount_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="12pt"
-            android:textColor="#000"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:text="23k"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subreddit_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Subreddit"
+            app:layout_constraintStart_toEndOf="@id/upVoteCount_TextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userName_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="UserName"
+            app:layout_constraintStart_toEndOf="@id/subreddit_TextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/RedditPost_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:text="Title"
+            android:textColor="#000"
+            android:textSize="12pt"
+            app:layout_constraintStart_toEndOf="@id/upVoteCount_TextView"
+            app:layout_constraintTop_toBottomOf="@id/subreddit_TextView" />
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/redditImage_ImageView"
@@ -28,17 +63,9 @@
             android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
             android:maxHeight="108dp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/upVoteCount_TextView"
             app:layout_constraintTop_toBottomOf="@+id/RedditPost_TextView" />
 
-        <TextView
-            android:id="@+id/subreddit_TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/redditImage_ImageView" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.v7.widget.CardView>
