@@ -147,6 +147,8 @@ public class RedditPostFragment extends Fragment {
             public TextView mRedditPostTextView;
             public ImageView mRedditPostImageView;
             public TextView mSubRedditTextView;
+            public TextView mRedditUserNameTextView;
+            public TextView mRedditUpVoteCount;
             public Response.ChildData mItem;
 
             public ViewHolder(View view, Response.ResponseChildData RedditPostData) {
@@ -156,11 +158,15 @@ public class RedditPostFragment extends Fragment {
                 mRedditPostTextView = view.findViewById(R.id.RedditPost_TextView);
                 mRedditPostImageView = view.findViewById(R.id.redditImage_ImageView);
                 mSubRedditTextView = view.findViewById(R.id.subreddit_TextView);
+                mRedditUserNameTextView = view.findViewById(R.id.userName_TextView);
+                mRedditUpVoteCount = view.findViewById(R.id.upVoteCount_TextView);
                 Glide.with(view)
                         .load(mItem.getThumbnail())
                         .into(mRedditPostImageView);
                 mRedditPostTextView.setText(mItem.getTitle());
                 mSubRedditTextView.setText(mItem.getSubreddit_name_prefixed());
+                mRedditUserNameTextView.setText(mItem.getAuthor());
+                mRedditUpVoteCount.setText(mItem.getUps());
 
             }
         }

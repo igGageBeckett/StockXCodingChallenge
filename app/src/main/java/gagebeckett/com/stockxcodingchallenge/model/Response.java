@@ -123,6 +123,15 @@ public class Response {
         public String getPermalink() {
             return permalink;
         }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public String getUps() {
+            return Integer.toString(ups);
+        }
+
     }
 }
 /*
